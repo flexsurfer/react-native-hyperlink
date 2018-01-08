@@ -16,7 +16,7 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactNative = require('react-native');
+var _reactNativeWeb = require('react-native-web');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30,8 +30,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @providesModule Hyperlink
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                **/
 
-var textPropTypes = _reactNative.Text.propTypes || {};
-var OS = _reactNative.Platform.OS;
+var textPropTypes = _reactNativeWeb.Text.propTypes || {};
+var OS = _reactNativeWeb.Platform.OS;
 
 var Hyperlink = function (_Component) {
   _inherits(Hyperlink, _Component);
@@ -67,7 +67,7 @@ var Hyperlink = function (_Component) {
       delete viewProps.linkStyle;
 
       return _react2.default.createElement(
-        _reactNative.View,
+        _reactNativeWeb.View,
         _extends({}, viewProps, { style: this.props.style }),
         !this.props.onPress && !this.props.onLongPress && !this.props.linkStyle ? this.props.children : this.parse(this).props.children
       );
@@ -117,7 +117,7 @@ var Hyperlink = function (_Component) {
           }
 
           elements.push(_react2.default.createElement(
-            _reactNative.Text,
+            _reactNativeWeb.Text,
             _extends({}, componentProps, {
               key: url + index,
               style: [component.props.style, _this2.props.linkStyle],
@@ -159,7 +159,7 @@ var Hyperlink = function (_Component) {
         var displayName = _child$type.displayName;
 
         if (typeof child === 'string' && _this3.linkifyIt.pretest(child)) return _this3.linkify(_react2.default.createElement(
-          _reactNative.Text,
+          _reactNativeWeb.Text,
           _extends({}, componentProps, { style: component.props.style }),
           child
         ));
@@ -196,8 +196,8 @@ var _class = function (_Component2) {
   _createClass(_class, [{
     key: 'handleLink',
     value: function handleLink(url) {
-      _reactNative.Linking.canOpenURL(url).then(function (supported) {
-        return supported && _reactNative.Linking.openURL(url);
+      _reactNativeWeb.Linking.canOpenURL(url).then(function (supported) {
+        return supported && _reactNativeWeb.Linking.openURL(url);
       });
     }
   }, {

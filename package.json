@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/obipawan/hyperlink#readme",
   "dependencies": {
+    "react-native-web": "0.1.12",
     "linkify-it": "^1.2.0"
   },
   "devDependencies": {

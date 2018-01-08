@@ -9,7 +9,7 @@ import {
 	Text, 
 	Linking, 
 	Platform
-} from 'react-native'
+} from 'react-native-web'
 
 const textPropTypes = Text.propTypes || {}
 const { OS } = Platform
